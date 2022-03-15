@@ -168,4 +168,4 @@ C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\
 C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_AuthLayout.cshtml.g.cs
-C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SideNavLayout.cshtml.g.cs
+C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\NavMenu.cshtml.g.cs

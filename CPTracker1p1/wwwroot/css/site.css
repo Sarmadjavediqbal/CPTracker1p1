@@ -102,24 +102,53 @@ body {
 }
 
 
-/*Side menu*/
 
-.vertical-menu {
-    width: 200px;
+/*Custom Sidebar Nav Menu CSS*/
+
+/*!
+
+*/
+#wrapper {
+    overflow-x: hidden;
 }
 
-.vertical-menu a {
-    background-color: #1861ac;
-    color:#fff;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -14rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
 }
 
-.vertical-menu a:hover {
-    background-color: #1b6ec2;
+    #sidebar-wrapper .sidebar-heading {
+        padding: 0.880rem 1.26rem;
+        font-size: 1.264rem;
+    }
+
+    #sidebar-wrapper .list-group {
+        width: 15rem;
+    }
+
+#page-content-wrapper {
+    min-width: 100vw;
 }
 
-.vertical-menu a.active {
-    background-color: #1b6ec2;
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media(min-width:768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
 }

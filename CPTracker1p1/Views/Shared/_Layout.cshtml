@@ -6,6 +6,11 @@
     <title>@ViewData["Title"] - CPTracker1p1</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <header>
@@ -31,42 +36,105 @@
                 </div>
             </div>
         </nav>
+        <form runat="server">
 
+            <div class="d-flex" id="wrapper">
+                <div class="bg-light border-light" id="sidebar-wrapper">
+                    <div class="sidebar-heading">Main Menu</div>
+                    <div class="list-group list-group-flush">
+                        <a class="list-group-item list-group-item-action bg-light nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"
+                           onclick="myFunc()">Dashboard</a>
+                        <a class="list-group-item list-group-item-action bg-light nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"
+                           onclick="myFunc">Contacts</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Sent Items</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Recieved Items</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Add Branch</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">All Branch</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Add Employee</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">All Employees</a>
+
+                    </div>
+
+                </div>
+                <div class="col-md-9" style="">
+                    @RenderBody()
+                </div>
+
+                <div id="page-content-wrapper">
+                    @*<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button type="button" id="menu-toggle" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </nav>*@
+
+                    @*<div class="container-fluid">
+                <h1 class="mt-4">Simple Sidebar</h1>
+                <p>
+                    ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>*@
+
+                </div>
+
+            </div>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="vendor/jquery/jquery.min.js"></script>
+
+
+
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+        </form>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            <div class="container-fluid">
+                <div class="row">
+                    
+                    <div class="col-md-3">
+                        <partial name="NavMenu.cshtml" />
+                    </div>
+
+                </div>
+            </div>
+            
+
+
+
         </main>
     </div>
-    <div id="wrapper">
-        Sidebar
-        <div id="sidebar-wrapper">
-            <ul id="sidebar_menu" class="sidebar-nav" style="text-align: right; padding-right: 10px;
-                    padding-top: 10px">
-                <li class="sidebar-brand">
-                    <a id="menu-toggle" href="#">
-                        <span id="main_icon" class="navbar-icon fa fa-bars icon">
-                        </span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#">Start Bootstrap </a></li>
-                <li><a href="#">Home</a> </li>
-                <li><a href="#">About</a> </li>
-                <li><a href="#">Contact</a> </li>
-            </ul>
-        </div>
 
-        /#page-content-wrapper
-    </div>
-    @*<partial name="_SideNavLayout.cshtml" />*@
+
 
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - CPTracker1p1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    <script>
+        function myFunc() {
+            var x = document.getElementById("myDiv");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
