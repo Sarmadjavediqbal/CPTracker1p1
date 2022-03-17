@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Parcel
+
+@{
+    ViewData["Title"] = "ReceiveItem";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            @{
+                Html.RenderPartial("NavMenu");
+            }
+        </div>
+        <div class="col-md-9">
+            <div class="container-fluid">
+                <h2>Received Items</h2>
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="col-md-5" style=" padding-top: 20px;">
+                            <button href="@Url.Action("ReceiveNewPar", "ParcelController",
+                                     new { id = "<ReceiveNewPar.cshtml>" })" class="btn btn-outline-dark dropright" style="width: 180px;">
+                                @Html.ActionLink("Courier", "ReceiveNewPar")
+                            </button>
+                        </div>
+                        <div class="col-md-5" style=" padding-top: 20px;">
+                            <button href="@Url.Action("ReceiveNewPar", "ParcelController",
+                                     new { id = "<ReceiveNewPar.cshtml>" })" class="btn btn-outline-dark dropright" style="width: 180px;">
+                                @Html.ActionLink("Company Mail", "ReceiveNewPar")
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

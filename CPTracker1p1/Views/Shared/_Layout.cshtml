@@ -36,80 +36,73 @@
                 </div>
             </div>
         </nav>
-        <form runat="server">
-
-            <div class="d-flex" id="wrapper">
-                <div class="bg-light border-light" id="sidebar-wrapper">
-                    <div class="sidebar-heading">Main Menu</div>
-                    <div class="list-group list-group-flush">
-                        <a class="list-group-item list-group-item-action bg-light nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"
-                           onclick="myFunc()">Dashboard</a>
-                        <a class="list-group-item list-group-item-action bg-light nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"
-                           onclick="myFunc">Contacts</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Sent Items</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Recieved Items</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Add Branch</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">All Branch</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">Add Employee</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-light">All Employees</a>
-
-                    </div>
-
-                </div>
-                <div class="col-md-9" style="">
-                    @RenderBody()
-                </div>
-
-                <div id="page-content-wrapper">
-                    @*<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <button type="button" id="menu-toggle" class="btn btn-primary">
-                    <i class="fa fa-bars"></i>
-                    <span class="sr-only">Toggle Menu</span>
-                </button>
-            </nav>*@
-
-                    @*<div class="container-fluid">
-                <h1 class="mt-4">Simple Sidebar</h1>
-                <p>
-                    ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>*@
-
-                </div>
-
-            </div>
-            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-            <script src="vendor/jquery/jquery.min.js"></script>
-
-
-
-            <div class="container body-content">
-                <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
-
-        </form>
+        
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            @RenderBody()
             <div class="container-fluid">
                 <div class="row">
-                    
-                    <div class="col-md-3">
-                        <partial name="NavMenu.cshtml" />
+                    <!--<form runat="server">
+
+                <div class="d-flex" id="wrapper">
+                    <div class="bg-light border-light" id="sidebar-wrapper">
+                        <div class="sidebar-heading">Main Menu</div>
+                        <div class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action bg-light nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Dashboard</a>
+                            <a class="list-group-item list-group-item-action bg-light nav-link text-dark" asp-area="" asp-controller="AddressBook" asp-action="Contact">Contacts</a>
+                            <a href="#" class="list-group-item list-group-item-action bg-light">Sent Items</a>
+                            <a href="#" class="list-group-item list-group-item-action bg-light">Recieved Items</a>
+                            <a href="#" class="list-group-item list-group-item-action bg-light">Add Branch</a>
+                            <a href="#" class="list-group-item list-group-item-action bg-light">All Branch</a>
+                            <a href="#" class="list-group-item list-group-item-action bg-light">Add Employee</a>
+                            <a href="#" class="list-group-item list-group-item-action bg-light">All Employees</a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="page-content-wrapper">-->
+                    @*<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button type="button" id="menu-toggle" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                </nav>*@
+
+                    @*<div class="container-fluid">
+                    <h1 class="mt-4">Simple Sidebar</h1>
+                    <p>
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>*@
+
+                    <!--</div>
+
+                </div>
+                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="vendor/jquery/jquery.min.js"></script>
+
+
+
+                <div class="container body-content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+            </form>-->
+                    <div class="col-md-9" style="">
+
                     </div>
 
                 </div>
             </div>
-            
-
-
-
         </main>
     </div>
 
