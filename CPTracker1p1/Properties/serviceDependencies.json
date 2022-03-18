@@ -3,6 +3,13 @@
     "mssql1": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:CPTracker1p1DbContextConnection"
+    },
+    "secrets1": {
+      "type": "secrets"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:CPTracker1DBContext"
     }
   }
 }

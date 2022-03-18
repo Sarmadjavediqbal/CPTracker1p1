@@ -177,3 +177,4 @@ C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\
 C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\Razor\Views\Parcel\ReceiveNewPar.cshtml.g.cs
 C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\Razor\Views\Branch\AddBranch.cshtml.g.cs
 C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\Razor\Views\Branch\ViewAllBranch.cshtml.g.cs
+C:\Users\airblue\source\repos\CPTracker1p1\CPTracker1p1\obj\Debug\netcoreapp3.1\Razor\Views\AddressBook\AddBK.cshtml.g.cs

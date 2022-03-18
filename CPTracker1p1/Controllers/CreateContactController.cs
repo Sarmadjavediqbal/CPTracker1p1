@@ -10,7 +10,7 @@ namespace CPTracker1p1.Controllers
     public class CreateContactController : Controller
     {
         // GET: CreateContactController
-        public ActionResult CreateContact()
+        public ActionResult Index()
         {
             return View();
         }

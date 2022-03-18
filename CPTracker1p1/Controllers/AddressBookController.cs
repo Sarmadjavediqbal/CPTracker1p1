@@ -12,10 +12,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authorization;
 using CPTracker1p1.Models;
 using Microsoft.Data.SqlClient;
+using System.Web;
 
 namespace CPTracker1p1.Controllers
 {
     [Authorize]
+    
     public class AddressBookController : Controller
     {
         private readonly IConfiguration configuration;
@@ -43,6 +45,7 @@ namespace CPTracker1p1.Controllers
 
         }
 
+
         [HttpGet]
         public JsonResult Get()
         {
@@ -68,17 +71,17 @@ namespace CPTracker1p1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public JsonResult Post(AddressBook Contact)
+        public JsonResult Post(AddressBook AddBK)
         {
             string query = @"insert into dbo.AddressBook(FirstName,LastName,cAddress,EmailId,ContactNo,Company)
                             values
                                 (
-                                    '" + Contact.FirstName + @"',
-                                    '" + Contact.LastName + @"',
-                                    '" + Contact.Address + @"',
-                                    '" + Contact.EmailId + @"',
-                                    '" + Contact.ContactNo + @"',
-                                    '" + Contact.Company + @"',
+                                    '" + AddBK.FirstName + @"',
+                                    '" + AddBK.LastName + @"',
+                                    '" + AddBK.Address + @"',
+                                    '" + AddBK.EmailId + @"',
+                                    '" + AddBK.ContactNo + @"',
+                                    '" + AddBK.Company + @"',
                                 )";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("AddressBookAppCon");

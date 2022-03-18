@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using CPTracker1p1.Controllers;
 
+
+
 namespace CPTracker1p1.Models
 {
     public class CreateContact : AddressBookController
@@ -12,12 +14,12 @@ namespace CPTracker1p1.Models
         {
         }
 
-        public int cId { get; set; }
-        public string cFirstName { get; set; }
-        public string cLastName { get; set; }
-        public string cAddress { get; set; }
-        public string cEmailId { get; set; }
-        public string cContactNo { get; set; }
-        public string cCompany { get; set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string EmailId { get; set; }
+        public string ContactNo { get; set; }
+        public string Company { get; set; }
     }
 }
