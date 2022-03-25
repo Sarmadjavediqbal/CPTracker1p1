@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using CPTracker1p1.Data;
 
 namespace CPTracker1p1
 {
@@ -25,7 +27,22 @@ namespace CPTracker1p1
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddMvc();
+
+            services.AddDbContext<CPTracker1p1NewDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("CPTracker1p1NewDbContext")));
+
         }
+
+        /*public void Configure(IApplicationBuilder app, IHostEnvironment env)
+        {
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Courier}/{action=Index}/{id?}");
+            });
+        }*/
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -42,6 +59,12 @@ namespace CPTracker1p1
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            /*app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "CourierControllerRoute",
+                    template: "{controller=Courier}/{action=Index}/{id?}");
+            });*/
 
             app.UseRouting();
 

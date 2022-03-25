@@ -11,6 +11,14 @@
       "type": "mssql.local",
       "connectionId": "ConnectionStrings:CPTracker1DBContext",
       "secretStore": "LocalSecretsFile"
+    },
+    "mssql3": {
+      "type": "mssql.local",
+      "connectionId": "ConnectionStrings:CPTracker1p1Context"
+    },
+    "mssql4": {
+      "type": "mssql.local",
+      "connectionId": "ConnectionStrings:CPTracker1p1NewDbContext"
     }
   }
 }

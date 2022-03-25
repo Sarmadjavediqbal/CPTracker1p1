@@ -27,7 +27,7 @@ using CPTracker1p1.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c163e110ff8f80f26fcc91a235484f58816bdae2", @"/Views/Parcel/ReceiveNewPar.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"74326933f0afe15d9620e64171febe9d684ab6c0", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a1c24b333bb9a0d783fd093398f938468da9a4b7", @"/Views/_ViewImports.cshtml")]
     public class Views_Parcel_ReceiveNewPar : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Parcel>
     {
         #pragma warning disable 1998

@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form method="post" asp-controller="Courier" asp-action="generate">
+    <input type="text" placeholder="productId" name="productId" />
+    <input type="submit" value="Generate" />
+</form>
+
+@if (ViewBag.productId != null)
+{
+    <qrcode content="@ViewBag.productId" width="100" height="100" alt="" name="productId"/>
+    <barcode content="@ViewBag.productId" width="200" height="100" alt="" name="productId"/>
+}

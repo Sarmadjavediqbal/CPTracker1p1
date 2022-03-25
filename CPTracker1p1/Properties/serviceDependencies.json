@@ -10,6 +10,14 @@
     "mssql2": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:CPTracker1DBContext"
+    },
+    "mssql3": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:CPTracker1p1Context"
+    },
+    "mssql4": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:CPTracker1p1NewDbContext"
     }
   }
 }
