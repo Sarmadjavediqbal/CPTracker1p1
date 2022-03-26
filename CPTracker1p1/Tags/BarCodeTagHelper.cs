@@ -24,7 +24,7 @@ namespace CPTracker1p1.Tags
             var height = int.Parse(context.AllAttributes["height"].Value.ToString());
             var BarcodeWriterPixelData = new BarcodeWriterPixelData
             {
-                Format = ZXing.BarcodeFormat.CODE_128,
+                Format = BarcodeFormat.CODE_128,
                 Options = new QrCodeEncodingOptions
                 {
                     Height = height,
@@ -53,7 +53,7 @@ namespace CPTracker1p1.Tags
                     output.Attributes.Clear();
                     output.Attributes.Add("width", width);
                     output.Attributes.Add("height", height);
-                    output.Attributes.Add("src", String.Format("data:image/png;base64.{0}",
+                    output.Attributes.Add("src", String.Format("data:image/png;base64,{0}",
                         Convert.ToBase64String(memoryStream.ToArray())));
                     
                 }

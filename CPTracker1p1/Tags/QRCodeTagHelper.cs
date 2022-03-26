@@ -51,7 +51,7 @@ namespace CPTracker1p1.Tags
                     output.Attributes.Clear();
                     output.Attributes.Add("width", width);
                     output.Attributes.Add("height", height);
-                    output.Attributes.Add("src", string.Format("data:image/png;base64.{0}",
+                    output.Attributes.Add("src", string.Format("data:image/png;base64,{0}",
                         Convert.ToBase64String(memoryStream.ToArray())));
                 }
             }
